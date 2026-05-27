@@ -1,5 +1,6 @@
 package stellarburgers;
 
+import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import org.hamcrest.MatcherAssert;
 import org.junit.Test;
@@ -11,6 +12,7 @@ public class ConstructorTest extends BaseTest {
 
     @Test
     @DisplayName("Переход к разделу «Соусы»")
+    @Description("Проверка переключения таба конструктора на раздел «Соусы»")
     public void shouldSwitchToSaucesSection() {
         navigateTo(MAIN_PAGE);
         objMainPage.waitForLoadMainPage();
@@ -23,6 +25,7 @@ public class ConstructorTest extends BaseTest {
 
     @Test
     @DisplayName("Переход к разделу «Начинки»")
+    @Description("Проверка переключения таба конструктора на раздел «Начинки»")
     public void shouldSwitchToFillingsSection() {
         navigateTo(MAIN_PAGE);
         objMainPage.waitForLoadMainPage();
@@ -35,6 +38,7 @@ public class ConstructorTest extends BaseTest {
 
     @Test
     @DisplayName("Переход к разделу «Булки»")
+    @Description("Проверка переключения таба конструктора на раздел «Булки»")
     public void shouldSwitchToBunsSection() {
         navigateTo(MAIN_PAGE);
         objMainPage.waitForLoadMainPage();

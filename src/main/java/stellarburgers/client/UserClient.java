@@ -8,6 +8,7 @@ import io.restassured.response.Response;
 import stellarburgers.model.User;
 
 import static io.restassured.RestAssured.given;
+import static stellarburgers.Endpoints.*;
 
 public class UserClient {
 
@@ -24,7 +25,7 @@ public class UserClient {
                 .header("Content-type", "application/json")
                 .body(user)
                 .when()
-                .post("/api/auth/register");
+                .post(REGISTER);
     }
 
     @Step("Login user via API")
@@ -33,7 +34,7 @@ public class UserClient {
                 .header("Content-type", "application/json")
                 .body(user)
                 .when()
-                .post("/api/auth/login");
+                .post(LOGIN);
     }
 
     @Step("Delete user via API")
@@ -41,7 +42,7 @@ public class UserClient {
         given()
                 .header("Authorization", accessToken)
                 .when()
-                .delete("/api/auth/user");
+                .delete(USER);
     }
 
 }

@@ -1,7 +1,7 @@
 package stellarburgers;
 
+import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
-import io.restassured.response.Response;
 import org.hamcrest.MatcherAssert;
 import org.junit.Test;
 import stellarburgers.generators.UserGenerator;
@@ -16,6 +16,7 @@ public class RegistrationTest extends BaseTest {
 
     @Test
     @DisplayName("Успешная регистрация пользователя")
+    @Description("Проверка успешной регистрации нового пользователя с валидными данными")
     public void shouldRegisterSuccessfully() {
         email = UserGenerator.generateRandomEmail();
         password = UserGenerator.generateRandomPassword();
@@ -37,6 +38,7 @@ public class RegistrationTest extends BaseTest {
 
     @Test
     @DisplayName("Ошибка при регистрации с коротким паролем (меньше 6 символов)")
+    @Description("Проверка появления ошибки при регистрации с паролем менее 6 символов")
     public void shouldShowErrorForShortPassword() {
         email = UserGenerator.generateRandomEmail();
         password = "12345";

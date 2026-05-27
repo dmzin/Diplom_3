@@ -1,5 +1,6 @@
 package stellarburgers;
 
+import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import org.hamcrest.MatcherAssert;
 import org.junit.Test;
@@ -11,6 +12,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     @DisplayName("Вход через кнопку «Войти в аккаунт» на главной странице")
+    @Description("Проверка входа в систему через кнопку «Войти в аккаунт» на главной странице")
     public void shouldLoginViaMainPageLoginButton() {
         createUserViaApi();
 
@@ -29,6 +31,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     @DisplayName("Вход через кнопку «Личный кабинет»")
+    @Description("Проверка входа в систему через кнопку «Личный кабинет» в шапке сайта")
     public void shouldLoginViaPersonalAccountButton() {
         createUserViaApi();
 
@@ -47,6 +50,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     @DisplayName("Вход через кнопку в форме регистрации")
+    @Description("Проверка входа в систему через ссылку «Войти» на странице регистрации")
     public void shouldLoginViaRegisterPage() {
         createUserViaApi();
 
@@ -65,6 +69,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     @DisplayName("Вход через кнопку в форме восстановления пароля")
+    @Description("Проверка входа в систему через ссылку «Войти» на странице восстановления пароля")
     public void shouldLoginViaForgotPasswordPage() {
         createUserViaApi();
 
